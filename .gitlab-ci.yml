@@ -1,0 +1,122 @@
+image: steveblackburn/comp1110-2020-s2-gitlab-ci:0.1.1
+
+stages:
+  - build
+  - test
+
+before_script:
+  - export CP=src:/exam/comp1110-exam-2020s1.jar:/exam/hamcrest-core-1.3.jar:/exam/junit-4.12.jar
+
+build:
+  tags:
+    - comp1110
+  stage: build
+  script:
+    - javac -encoding utf-8 $JAVAFX_OPTIONS -cp $CP src/comp1110/exam/*.java
+  artifacts:
+    paths:
+      - src/comp1110/exam/*.class
+
+Q1Factors:
+  tags:
+    - comp1110
+  stage: test
+  script:
+    - java -cp $CP org.junit.runner.JUnitCore comp1110.exam.Q1FactorsTest
+  allow_failure: true
+
+Q1Tao:
+  tags:
+    - comp1110
+  stage: test
+  script:
+    - java -cp $CP org.junit.runner.JUnitCore comp1110.exam.Q1TaoTest
+  allow_failure: true
+
+Q1FamilyTree:
+  tags:
+    - comp1110
+  stage: test
+  script:
+    - java -cp $CP org.junit.runner.JUnitCore comp1110.exam.Q1FamilyTreeTest
+  allow_failure: true
+
+Q1Rain:
+  tags:
+    - comp1110
+  stage: test
+  script:
+    - java -cp $CP org.junit.runner.JUnitCore comp1110.exam.Q1RainTest
+  allow_failure: true
+
+Q1CropRotation:
+  tags:
+    - comp1110
+  stage: test
+  script:
+    - java -cp $CP org.junit.runner.JUnitCore comp1110.exam.Q1CropRotationTest
+  allow_failure: true
+
+Q1MealPlan:
+  tags:
+    - comp1110
+  stage: test
+  script:
+    - java -cp $CP org.junit.runner.JUnitCore comp1110.exam.Q1MealPlanTest
+  allow_failure: true
+
+Q1Sudoku:
+  tags:
+    - comp1110
+  stage: test
+  script:
+    - java -cp $CP org.junit.runner.JUnitCore comp1110.exam.Q1SudokuTest
+  allow_failure: true
+
+Q2Awk:
+  tags:
+    - comp1110
+  stage: test
+  script:
+    - java -cp $CP org.junit.runner.JUnitCore comp1110.exam.Q2AwkTest
+  allow_failure: true
+
+Q3Wiki:
+  tags:
+    - comp1110
+  stage: test
+  script:
+    - java -cp $CP org.junit.runner.JUnitCore comp1110.exam.Q3WikiTest
+  allow_failure: true
+
+Q4ArrayQueue:
+  tags:
+    - comp1110
+  stage: test
+  script:
+    - java -cp $CP org.junit.runner.JUnitCore comp1110.exam.Q4ArrayQueueTest
+  allow_failure: true
+
+Q4ArrayStack:
+  tags:
+    - comp1110
+  stage: test
+  script:
+    - java -cp $CP org.junit.runner.JUnitCore comp1110.exam.Q4ArrayStackTest
+  allow_failure: true
+
+Q5PackageSpecification:
+  tags:
+    - comp1110
+  stage: test
+  script:
+    - java -cp $CP org.junit.runner.JUnitCore comp1110.exam.Q5PackageSpecificationTest
+  allow_failure: true
+
+Q5StringHash:
+  tags:
+    - comp1110
+  stage: test
+  script:
+    - java -cp $CP org.junit.runner.JUnitCore comp1110.exam.Q5StringHashTest
+  allow_failure: true

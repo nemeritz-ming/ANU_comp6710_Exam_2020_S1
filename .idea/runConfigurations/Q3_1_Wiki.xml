@@ -1,0 +1,14 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Q3.1 Wiki" type="JUnit" factoryName="JUnit">
+    <module name="COMP1110 Exam" />
+    <useClassPathOnly />
+    <option name="PACKAGE_NAME" value="comp1110.exam" />
+    <option name="MAIN_CLASS_NAME" value="comp1110.exam.Q3WikiTest" />
+    <option name="METHOD_NAME" value="" />
+    <option name="TEST_OBJECT" value="class" />
+    <option name="PARAMETERS" value="" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
